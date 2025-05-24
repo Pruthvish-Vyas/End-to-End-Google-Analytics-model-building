@@ -1,4 +1,4 @@
-## End to End MAchine Learning Project
+## End to End Google Analytics model building Project
 
 - open project on these urls:
         http://localhost:5000
