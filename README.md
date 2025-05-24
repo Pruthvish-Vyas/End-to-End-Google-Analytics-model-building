@@ -1,134 +1,375 @@
-# Facebook Ad Analytics & AI Assistant
 
-## 🚀 Overview
-An advanced Streamlit application integrating machine learning predictions with GPT-powered insights for Facebook advertising campaigns. Built with Streamlit and OpenAI's GPT models, this tool helps advertisers predict conversion rates and get AI-powered campaign optimization suggestions.
+# Google Analytics Dashboard & Predictor
 
-## ✨ Key Features
+## Overview
+Advanced Google Analytics data analysis and prediction platform that provides comprehensive insights into website performance, user behavior, and conversion metrics with machine learning-powered forecasting capabilities.
 
-### 📊 Prediction Module
-- Real-time conversion predictions
-- Campaign performance metrics (CTR, CPC, CVR)
-- Interactive dashboard with key metrics
-- Campaign summary visualization
-- Date-based analysis
+## Features
 
-### 🤖 AI Assistant Features
-- GPT-powered campaign analysis
-- Multiple model options:
-  - GPT-3.5-turbo
-  - GPT-4
-  - GPT-4-turbo-preview
-  - GPT-3.5-turbo-16k
-- Contextual recommendations
-- Chat interface with history
-- Example questions provided
+### Analytics Dashboard
+- Real-time traffic monitoring
+- User behavior analysis
+- Conversion tracking
+- Geographic visualization
+- Custom event tracking
+- Session analysis
 
-## 💻 Technical Details
+### Prediction System
+- Traffic forecasting
+- Conversion rate prediction
+- Behavior pattern analysis
+- Anomaly detection
+- Trend forecasting
 
-### Dependencies
-```python
-streamlit
-pandas
-datetime
-openai
-python-dotenv
+## Technical Stack
+- Python 3.8+
+- Google Analytics API
+- Pandas & NumPy
+- Scikit-learn
+- Plotly/Dash
+- FastAPI
+- SQLAlchemy
+- JWT Authentication
+
+## Project Structure
 ```
-
-### Project Structure
-```
-fb/
-├── app.py # Main Streamlit application
+Ga/
+├── app.py # Main application
 ├── src/
-│ ├── pipeline/
-│ │ └── predict_pipeline.py
-│ ├── components/
-│ │ ├── data_processor.py
-│ │ └── model.py
-│ ├── utils/
-│ │ └── helpers.py
-│ └── logger/
-│ └── init.py
-├── models/ # Saved model files
-├── data/ # Data directory
-├── tests/ # Unit tests
-├── config/ # Configuration files
+│ ├── analytics/
+│ │ ├── data_fetcher.py
+│ │ └── metrics_calculator.py
+│ ├── models/
+│ │ ├── predictor.py
+│ │ └── trainer.py
+│ ├── visualization/
+│ │ └── dashboard.py
+│ └── utils/
+│ ├── helpers.py
+│ └── config.py
+├── data/
+│ ├── raw/
+│ └── processed/
+├── notebooks/
+├── tests/
+├── config/
 ├── requirements.txt
 └── README.md
 ```
 
-## 🎯 Features
 
-### Campaign Metrics Input
-- Campaign ID & Facebook Campaign ID
-- Date range selection
-- Demographic targeting (age groups, gender)
-- Interest targeting (up to 3 interests)
-- Performance metrics:
-  - Impressions
-  - Clicks
-  - Spend
-  - Total conversions
-
-### Performance Analytics
-- CTR (Click-Through Rate)
-- CPC (Cost per Click)
-- CVR (Conversion Rate)
-- Approved conversions prediction
-
-### AI Assistant Capabilities
-- Performance analysis
-- Campaign optimization tips
-- Budget recommendations
-- Targeting suggestions
-- KPI interpretation
-- Best practices
-
-## 🚀 Getting Started
-
-1. Clone and install dependencies:
+## Installation
+1. Clone repository:
 ```bash
-git clone <repository>
-cd fb
+git clone <repository-url>
+cd Ga 
+```
+
+## Create venv
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+## Install dependencies
+``` bash
 pip install -r requirements.txt
 ```
 
-2. Run the application:
-```bash
-streamlit run app.py
-```
+## Input Parameters
 
-3. Configure:
-   - Enter OpenAI API key for AI assistant
-   - Input campaign metrics
-   - Choose between prediction tool and AI chat
+### Date Range
+- Custom date selection
+- Predefined ranges (Today, Yesterday, Last 7 days, Last 30 days)
+- Compare periods functionality
+- Seasonal date mapping
 
-## 💡 Usage Tips
+### Metrics Selection
+- Page views
+- Sessions
+- Users
+- New users
+- Average session duration
+- Pages/session
+- Custom metrics configuration
+- E-commerce metrics
 
-### Prediction Tool
-1. Enter campaign details in sidebar
-2. Input performance metrics
-3. Click "Predict Approved Conversions"
-4. View results and KPIs
+### Dimensions
+- User type
+- Device category
+- Browser
+- Operating system
+- Country/region
+- Landing page
+- Source/medium
+- Campaign
 
-### AI Assistant
-1. Enter OpenAI API key
-2. Select preferred model
-3. Ask questions about:
-   - Campaign performance
-   - Optimization strategies
-   - Metric interpretation
-   - Best practices
+### Segments
+- Default segments
+- Custom segment builder
+- User segments
+- Session segments
+- Condition-based segments
+- Sequence segments
 
-## 🔒 Security
-- API keys are session-only
-- No data persistence
-- Secure processing
+### Filters
+- Include/exclude patterns
+- Regular expressions
+- Advanced filters
+- Compound filters
+- Filter groups
+- View filters
 
-## 📝 Notes
-- CTR = (clicks/impressions) × 100
-- CPC = spent/clicks
-- CVR = (conversions/clicks) × 100
-- Keep API key confidential
+### Custom Dimensions
+- User-level dimensions
+- Session-level dimensions
+- Hit-level dimensions
+- Product-level dimensions
+- Custom scope settings
+- Dynamic value insertion
 
-## 📄 License
-MIT License - Feel free to use and modify as needed.
+### Goals
+- Destination goals
+- Duration goals
+- Pages/screens per session
+- Event goals
+- Smart goals
+- Goal value setting
+
+### Events
+- Event category
+- Event action
+- Event label
+- Event value
+- Custom events
+- Enhanced e-commerce events
+
+## Output Metrics
+
+### Session Data
+- Total sessions
+- Average session duration
+- Pages per session
+- Session flow visualization
+- Session quality
+- Session source/medium
+
+### User Metrics
+- Active users
+- New vs returning users
+- User engagement
+- User retention
+- User lifetime value
+- User behavior flow
+
+### Conversion Rates
+- Goal conversion rate
+- E-commerce conversion rate
+- Funnel conversion rates
+- Channel-specific conversions
+- Landing page conversion
+- Campaign conversion rates
+
+### Bounce Rates
+- Overall bounce rate
+- Page-specific bounce rates
+- Landing page bounce rates
+- Device-specific bounce rates
+- Channel bounce rates
+- Exit rates
+
+### Page Performance
+- Page load time
+- Server response time
+- DOM processing
+- Page rendering time
+- Resource loading
+- User timing
+
+### Event Tracking
+- Event categories
+- Event actions
+- Event labels
+- Event values
+- Event flow
+- Custom event metrics
+
+### Goal Completions
+- Goal completion rates
+- Goal value
+- Goal flow visualization
+- Funnel visualization
+- Abandonment rates
+- Goal attribution
+
+### Custom Reports
+- Custom dimensions
+- Custom metrics
+- Calculated metrics
+- Advanced segments
+- Custom visualizations
+- Automated reports
+
+## AI Capabilities
+
+### Traffic Pattern Analysis
+- Peak traffic prediction
+- Seasonal patterns
+- Traffic source analysis
+- User flow optimization
+- Channel attribution
+- Traffic quality scoring
+
+### User Behavior Prediction
+- Next action prediction
+- Churn probability
+- Engagement scoring
+- Content affinity
+- Purchase probability
+- Path prediction
+
+### Conversion Optimization
+- Conversion probability
+- Opportunity identification
+- A/B test suggestions
+- Personalization insights
+- Revenue optimization
+- Campaign optimization
+
+### Anomaly Detection
+- Traffic anomalies
+- Conversion anomalies
+- Performance issues
+- Security threats
+- Data quality issues
+- System health monitoring
+
+### Trend Analysis
+- Long-term trends
+- Seasonal patterns
+- Growth prediction
+- Decline analysis
+- Pattern recognition
+- Trend forecasting
+
+### Custom Alerts
+- Threshold-based alerts
+- Intelligent alerting
+- Predictive alerts
+- Custom conditions
+- Alert prioritization
+- Notification system
+
+### Automated Reporting
+- Scheduled reports
+- Dynamic dashboards
+- Custom visualizations
+- Data exports
+- Report automation
+- Interactive reports
+
+## Security
+
+### Secure API Authentication
+- OAuth 2.0 implementation
+- API key management
+- Token-based authentication
+- Multi-factor authentication
+- Session management
+- Access control
+
+### Data Encryption
+- At-rest encryption
+- In-transit encryption
+- End-to-end encryption
+- Key management
+- Encryption algorithms
+- Security protocols
+
+### Role-Based Access
+- User roles
+- Permission levels
+- Access controls
+- Role hierarchy
+- Activity monitoring
+- Access reviews
+
+### Audit Logging
+- User activity logs
+- System logs
+- Security logs
+- Change tracking
+- Access logs
+- Compliance reporting
+
+### GDPR Compliance
+- Data privacy
+- User consent
+- Data portability
+- Right to be forgotten
+- Data minimization
+- Privacy by design
+
+### Data Retention Policies
+- Retention periods
+- Data archiving
+- Data deletion
+- Backup policies
+- Recovery procedures
+- Compliance requirements
+
+## Notes
+
+### Daily Data Refresh
+- Automated updates
+- Refresh schedule
+- Data validation
+- Error handling
+- Recovery procedures
+- Status monitoring
+
+### API Quota Limits
+- Rate limits
+- Usage monitoring
+- Quota management
+- Throttling
+- Error handling
+- Optimization strategies
+
+### Cache Management
+- Cache strategy
+- Cache invalidation
+- Performance optimization
+- Memory management
+- Cache monitoring
+- Cache updates
+
+### Regular Backups
+- Backup schedule
+- Backup verification
+- Recovery testing
+- Retention policy
+- Security measures
+- Disaster recovery
+
+### Performance Optimization
+- Load balancing
+- Query optimization
+- Resource management
+- Response time
+- Scalability
+- Monitoring tools
+
+### Data Sampling Considerations
+- Sampling methods
+- Sample size
+- Confidence levels
+- Margin of error
+- Data quality
+- Statistical significance
+
+
+
+
+
+
